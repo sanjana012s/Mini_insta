@@ -1,0 +1,44 @@
+body {background:linear-gradient(45deg,#f58529,#7d7478,#7006ad); color:#fff; font-family:sans-serif; }
+.profile { max-width:400px; margin:20px auto; text-align:center;
+  width:500px;
+background:#1e1c54; padding:20px; border-radius:10px; }
+.profile-pic-wrapper { position:relative; display:inline-block; padding:5px; border-radius:50%; background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);}
+.profile-pic { width:120px; height:120px; border-radius:50%; border:3px solid #fff; object-fit:cover; }
+.upload-icon { position:absolute; bottom:0; right:0; background:#ff3d6e; color:#fff; width:30px; height:30px; border-radius:50%; font-size:24px; line-height:30px; text-align:center; cursor:pointer; border:2px solid white; }
+.upload-icon:hover { background:#ff6b95; }
+.search-bar { width:100%; padding:12px 7px; border-radius:20px; border:none; outline:none; margin:15px 0; }
+#searchResults { list-style:none; padding:0; margin:10px 0 0 0; max-height:300px; overflow-y:auto; background:rgba(255,255,255,0.15); border-radius:10px; }
+.search-result-item { display:flex; align-items:center; padding:8px 12px; cursor:pointer; }
+.search-result-item:hover { background:rgba(255,255,255,0.25); }
+.search-dp { width:50px; height:50px; border-radius:50%; margin-right:10px; object-fit:cover; border:2px solid white; }
+.search-info p { margin:2px 0; font-size:12px; color:#fff; }
+.search-info small { font-size:10px; color:#eee; }
+.login-container { 
+  margin-top:100px;
+  max-width:400px; margin:200px auto; background:#712727; padding:80px; border-radius:10px; text-align:center; 
+}
+.login-container input { width:90%; padding:8px 10px; margin:10px 0; border-radius:20px; border:none; outline:none; }
+.login-container button { padding:8px 20px; border:none; border-radius:20px; cursor:pointer; background:#ff3d6e; color:#fff; }
+.logout-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background-color: #ff3d6e; /* pink/red gradient Instagram-style */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.logout-btn:hover {
+  background-color: #ff6b95; /* slightly lighter on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.35);
+}
+.color{
+  background-color:black;
+  width:100%;
+  height:100px;
+}

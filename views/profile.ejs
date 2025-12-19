@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>@<%= data.username %> | InstaApp</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div><center><h1>&hearts; WELCOME TO INSTA HOMEPAGE &hearts;</h1></center></div>
+  <hr><hr>
+  <div class="profile" id="profileContainer">
+
+    <!-- Profile Info -->
+    <div id="profileInfo">
+      <div class="profile-pic-wrapper">
+        <img src="<%= data.profilePic %>" id="profile-pic" class="profile-pic" alt="Profile">
+        <label for="profilePicInput" class="upload-icon">+</label>
+        <input type="file" name="profilePic" id="profilePicInput" accept="image/*" style="display:none;">
+      </div>
+
+      <h2>@<%= data.username %></h2>
+      <p class="bio"><%= data.bio %></p>
+      <p>Followers: <%= data.followers %> | Following: <%= data.following %></p>
+    </div>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchInput" placeholder="Search users..." class="search-bar">
+    <ul id="searchResults"></ul>
+
+    <!-- Hidden form for photo upload -->
+    <form id="upload-form" action="/upload/<%= data.username %>" method="POST" enctype="multipart/form-data" style="display:none;">
+      <input type="file" name="profilePic" id="hiddenProfilePicInput">
+    </form>
+
+    <a href="/" class="logout-btn">Logout</a>
+  </div>
+ <div>
+ </div>
+ <br>
+  <div>
+  
+ </div>
+ <hr>
+ <div id="color"> </div>
+
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    const profileInfo = document.getElementById("profileInfo");
+    const input = document.getElementById("profilePicInput");
+    const profilePic = document.getElementById("profile-pic");
+    const form = document.getElementById("upload-form");
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
+
+    // ===== Profile photo live preview + auto upload =====
+    input.addEventListener("change", function(e){
+      const file = e.target.files[0];
+      if(file){
+        // Live preview
+        const reader = new FileReader();
+        reader.onload = function(evt){
+          profilePic.src = evt.target.result;
+        }
+        reader.readAsDataURL(file);
+
+        // Set file to hidden form input and submit
+        const dataTransfer = new DataTransfer();
+        dataTransfer.items.add(file);
+        document.getElementById("hiddenProfilePicInput").files = dataTransfer.files;
+
+        form.submit();
+      }
+    });
+
+    // ===== Search functionality =====
+    searchInput.addEventListener("input", async () => {
+      const query = searchInput.value.trim().toLowerCase();
+      searchResults.innerHTML = "";
+
+      if(query.length === 0){
+        profileInfo.style.display = "block"; // show profile if search empty
+        return;
+      }
+
+      profileInfo.style.display = "none"; // hide profile while searching
+
+      try {
+        const res = await fetch("/search?query=" + query);
+        const users = await res.json();
+
+        users.forEach(u => {
+          const li = document.createElement("li");
+          li.className = "search-result-item";
+          li.innerHTML = `
+            <img src="${u.profilePic}" class="search-dp">
+            <div class="search-info">
+              <strong>@${u.username}</strong>
+              <p>${u.bio}</p>
+              <small>Followers: ${u.followers} | Following: ${u.following}</small>
+            </div>
+          `;
+
+          // ✅ Click result → go to that user's profile
+          li.addEventListener("click", () => {
+            window.location.href = `/profile/${u.username}`;
+          });
+
+          searchResults.appendChild(li);
+        });
+      } catch(err){
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "sanjana": {
+    "username": "sanjana",
+    "bio": "Hey, I am new on InstaPage!",
+    "followers": 359,
+    "following": 83,
+    "profilePic": "/images/1762716776175.jpg"
+  },
+  "neha gupta": {
+    "username": "neha gupta",
+    "bio": "Hey, I am new on InstaPage!",
+    "followers": 239,
+    "following": 283,
+    "profilePic": "/images/default.png"
+  },
+  "admin": {
+    "username": "admin",
+    "bio": "Hey, I am new on InstaPage!",
+    "followers": 0,
+    "following": 161,
+    "profilePic": "/images/default.png"
+  },
+  "satyam gpt": {
+    "username": "satyam gpt",
+    "bio": "Hey, I am new on InstaApp!",
+    "followers": 18,
+    "following": 287,
+    "profilePic": "/images/1762713112722-stm.jpg"
+  },
+  "ankit gupta": {
+    "username": "ankit gupta",
+    "bio": "Hey, I am new on InstaApp!",
+    "followers": 207,
+    "following": 139,
+    "profilePic": "/images/1762713840453-OIP.jpg"
+  },
+  "parul pandey": {
+    "username": "parul pandey",
+    "bio": "Hey, I am new on InstaPage!",
+    "followers": 199,
+    "following": 272,
+    "profilePic": "/images/1763220982031.jpg"
+  },
+  "rohit gupta": {
+    "username": "rohit gupta",
+    "bio": "Hey, I am new on InstaPage!",
+    "followers": 217,
+    "following": 131,
+    "profilePic": "/images/1763220872354.jpg"
+  },
+  "sanjana gupta": {
+    "username": "sanjana gupta",
+    "bio": "Hey, I am new on InstaPage!",
+    "followers": 460,
+    "following": 288,
+    "profilePic": "/images/default.png"
+  },
+  "Ankit gupta": {
+    "username": "Ankit gupta",
+    "bio": "Hey, I am new on InstaPage!",
+    "followers": 91,
+    "following": 34,
+    "profilePic": "/images/default.png"
+  },
+  "ramesh pal": {
+    "username": "ramesh pal",
+    "bio": "Hey, I am new on InstaPage!",
+    "followers": 254,
+    "following": 265,
+    "profilePic": "/images/1763627431115.jpg"
+  }
+}
