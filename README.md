@@ -1,6 +1,6 @@
 
 # mini_insta
-=======
+
 # 🚀 Mini_Insta - Your Personal Social Media Hu
 Welcome to **Mini_Insta**, a sleek and powerful mini social media platform built with Node.js, Express, and EJS. Experience the essence of Instagram with user profiles, image uploads, search functionality, and more – all in a lightweight, easy-to-deploy application!
 
@@ -18,7 +18,7 @@ Welcome to **Mini_Insta**, a sleek and powerful mini social media platform built
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/mini_insta.git
+   git clone https://github.com/sanjana012s/mini_insta.git
    cd mini_insta
    ```
 
@@ -44,11 +44,11 @@ Welcome to **Mini_Insta**, a sleek and powerful mini social media platform built
 ### Screenshots
 
 #### Login Page
-![Home Page](public/images/screenshot1.png)
+<img src="public/images/screenshot1.png" alt="Home Page" width="500" height="500">
 *Welcome screen where users can enter their username to access the app.*
 
 #### Profile Page
-![Search Page](public/images/screenshot2.png)
+<img src="public/images/screenshot2.png" alt="Search Page" width="500" height="500">
 *User profile displaying bio, followers, following, and profile picture with interactive hover effects.*
 
 ## 🎯 Key Highlights
@@ -74,9 +74,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-For questions or support, reach out to [your-email@example.com](mailto:your-email@example.com).
+9919261458
 
 ---
 
 *Built with ❤️ using Node.js and Express.*
->>>>>>> 5fdc381cf6aec1d69594ba4db05b38d228d37554
